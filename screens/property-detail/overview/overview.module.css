@@ -13,13 +13,6 @@
     color: var(--slate-500);
 }
 
-.agent {
-    padding: 48px;
-    background-color: var(--slate-100);
-    border: 1px solid var(--slate-200);
-    border-radius: 24px;
-}
-
 .features {
     margin-top: 24px;
 }
@@ -74,6 +67,39 @@
     color: var(--slate-500);
 }
 
+.agent {
+    padding: 48px;
+    background-color: var(--slate-100);
+    border: 1px solid var(--slate-200);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.avatar {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.name {
+    font-weight: 500;
+}
+
+.email {
+    color: var(--slate-500);
+}
+
 @media (max-width: 1024px) {
     .container {
         gap: 64px;
@@ -89,6 +115,6 @@
 
 @media (max-width: 480px) {
     .agent {
-        padding: 32px;
+        padding: 24px;
     }
 }

@@ -6,6 +6,9 @@ import cn from "classnames";
 import { Heading } from "@/components/typography";
 import PropertyFeatures from "@/components/property-features";
 import { Plus } from "@/constants/icons";
+import { TextArea } from "@/components/elements";
+import Image from "next/image";
+import AgentForm from "@/components/agent-form";
 
 const details = [
   {
@@ -119,6 +122,28 @@ export default function Overview({ item }: OverviewProps) {
 
         <div className={styles.agent}>
           <div className={cn("heading-6")}>Listing Agent</div>
+
+          <div className={styles.profile}>
+            <div>
+              <div className={cn("paragraph-x-large", styles.name)}>
+                David Lee
+              </div>
+              <div className={cn("paragraph-medium", styles.email)}>
+                davidlee@support.com
+              </div>
+            </div>
+
+            <div className={styles.avatar}>
+              <Image
+                src="/images/team/david-lee.webp"
+                alt="agent"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
+          </div>
+
+          <AgentForm />
         </div>
       </div>
     </section>
