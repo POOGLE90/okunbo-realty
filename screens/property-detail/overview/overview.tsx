@@ -6,7 +6,6 @@ import cn from "classnames";
 import { Heading } from "@/components/typography";
 import PropertyFeatures from "@/components/property-features";
 import { Plus } from "@/constants/icons";
-import { TextArea } from "@/components/elements";
 import Image from "next/image";
 import AgentForm from "@/components/agent-form";
 
@@ -57,6 +56,13 @@ type OverviewProps = {
     image: string;
     price: number;
     category: string;
+    location: string;
+    agent: {
+      name: string;
+      email: string;
+      phone: string;
+      image: string;
+    };
     features: {
       id: number;
       icon: string;
@@ -126,16 +132,16 @@ export default function Overview({ item }: OverviewProps) {
           <div className={styles.profile}>
             <div>
               <div className={cn("paragraph-x-large", styles.name)}>
-                David Lee
+                {item.agent && item.agent.name}
               </div>
               <div className={cn("paragraph-medium", styles.email)}>
-                davidlee@support.com
+                {item.agent && item.agent.email}
               </div>
             </div>
 
             <div className={styles.avatar}>
               <Image
-                src="/images/team/david-lee.webp"
+                src={item.agent && item.agent.image}
                 alt="agent"
                 layout="fill"
                 objectFit="cover"

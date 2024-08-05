@@ -45,6 +45,12 @@ const Listings = [
           "/images/properties/houses/123-serenity-lane-playground.webp",
         ],
         address: "123 Serenity Lane, Los Angeles, CA",
+        agent: {
+          name: "David Lee",
+          image: "/images/team/david-lee.webp",
+          email: "davidlee@support.com",
+          phone: "(123) 456-7890",
+        },
         features: [
           {
             id: 1,
@@ -83,6 +89,12 @@ const Listings = [
           "/images/properties/houses/123-serenity-lane-playground.webp",
         ],
         address: "456 Harmony Drive, Los Angeles, CA",
+        agent: {
+          name: "Emily Davis",
+          image: "/images/team/emily-davis.webp",
+          email: "emilydavis@support.com",
+          phone: "(123) 456-7890",
+        },
         features: [
           {
             id: 1,
@@ -121,6 +133,12 @@ const Listings = [
           "/images/properties/houses/123-serenity-lane-playground.webp",
         ],
         address: "989 Bliss Boulevard, Los Angeles, CA",
+        agent: {
+          name: "Michael Brown",
+          image: "/images/team/michael-brown.webp",
+          email: "michael@support.com",
+          phone: "(123) 456-7890",
+        },
         features: [
           {
             id: 1,
@@ -166,6 +184,12 @@ const Listings = [
           "/images/properties/houses/123-serenity-lane-playground.webp",
         ],
         address: "123 Modern Townhouse, San Francisco, CA",
+        agent: {
+          name: "Ryan Cooper",
+          image: "/images/team/ryan-cooper.webp",
+          email: "ryancooper@support.com",
+          phone: "(123) 456-7890",
+        },
         features: [
           {
             id: 1,
@@ -204,6 +228,12 @@ const Listings = [
           "/images/properties/houses/123-serenity-lane-playground.webp",
         ],
         address: "456 Urban Townhome, New York, NY",
+        agent: {
+          name: "Olivia Hernandez",
+          image: "/images/team/olivia-hernandez.webp",
+          email: "olivia@support.com",
+          phone: "(123) 456-7890",
+        },
         features: [
           {
             id: 1,
@@ -242,6 +272,12 @@ const Listings = [
           "/images/properties/houses/123-serenity-lane-playground.webp",
         ],
         address: "789 Suburban Townhouse, Chicago, IL",
+        agent: {
+          name: "Ethan Brooks",
+          image: "/images/team/ethan-brooks.webp",
+          email: "ethan@support.com",
+          phone: "(123) 456-7890",
+        },
         features: [
           {
             id: 1,
@@ -286,6 +322,12 @@ const Listings = [
           "/images/properties/houses/123-serenity-lane-playground.webp",
         ],
         address: "456 City Apartment, San Francisco, CA",
+        agent: {
+          name: "Ryan Cooper",
+          image: "/images/team/ryan-cooper.webp",
+          email: "ryancooper@support.com",
+          phone: "(123) 456-7890",
+        },
         features: [
           {
             id: 1,
@@ -324,6 +366,12 @@ const Listings = [
           "/images/properties/houses/123-serenity-lane-playground.webp",
         ],
         address: "789 Downtown Loft, New York, NY",
+        agent: {
+          name: "Michael Brown",
+          image: "/images/team/michael-brown.webp",
+          email: "michael@support.com",
+          phone: "(123) 456-7890",
+        },
         features: [
           {
             id: 1,
@@ -362,6 +410,12 @@ const Listings = [
           "/images/properties/houses/123-serenity-lane-playground.webp",
         ],
         address: "321 Suburban Apartment, Chicago, IL",
+        agent: {
+          name: "David Lee",
+          image: "/images/team/david-lee.webp",
+          email: "davidlee@support.com",
+          phone: "(123) 456-7890",
+        },
         features: [
           {
             id: 1,
@@ -406,6 +460,12 @@ const Listings = [
           "/images/properties/houses/123-serenity-lane-playground.webp",
         ],
         address: "123 Main Street, Los Angeles, CA",
+        agent: {
+          name: "Emily Davis",
+          image: "/images/team/emily-davis.webp",
+          email: "emilydavis@support.com",
+          phone: "(123) 456-7890",
+        },
         features: [
           {
             id: 1,
@@ -444,6 +504,12 @@ const Listings = [
           "/images/properties/houses/123-serenity-lane-playground.webp",
         ],
         address: "456 Industrial Road, San Francisco, CA",
+        agent: {
+          name: "Ryan Cooper",
+          image: "/images/team/ryan-cooper.webp",
+          email: "ryancooper@support.com",
+          phone: "(123) 456-7890",
+        },
         features: [
           {
             id: 1,
@@ -482,6 +548,12 @@ const Listings = [
           "/images/properties/houses/123-serenity-lane-playground.webp",
         ],
         address: "789 Shopping Center Blvd, New York, NY",
+        agent: {
+          name: "Olivia Hernandez",
+          image: "/images/team/olivia-hernandez.webp",
+          email: "olivia@support.com",
+          phone: "(123) 456-7890",
+        },
         features: [
           {
             id: 1,
@@ -526,6 +598,12 @@ const Listings = [
           "/images/properties/houses/123-serenity-lane-playground.webp",
         ],
         address: "123 Ocean Drive, Miami, FL",
+        agent: {
+          name: "Ethan Brooks",
+          image: "/images/team/ethan-brooks.webp",
+          email: "ethanbrooks@support.com",
+          phone: "(123) 456-7890",
+        },
         features: [
           {
             id: 1,
@@ -564,6 +642,12 @@ const Listings = [
           "/images/properties/houses/123-serenity-lane-playground.webp",
         ],
         address: "456 Alpine Road, Aspen, CO",
+        agent: {
+          name: "Olivia Hernandez",
+          image: "/images/team/olivia-hernandez.webp",
+          email: "olivia@support.com",
+          phone: "(123) 456-7890",
+        },
         features: [
           {
             id: 1,
@@ -602,6 +686,12 @@ const Listings = [
           "/images/properties/houses/123-serenity-lane-playground.webp",
         ],
         address: "789 Estate Drive, Beverly Hills, CA",
+        agent: {
+          name: "David Lee",
+          image: "/images/team/david-lee.webp",
+          email: "david@support.com",
+          phone: "(123) 456-7890",
+        },
         features: [
           {
             id: 1,
