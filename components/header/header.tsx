@@ -95,6 +95,7 @@ export default function Header() {
     <header
       className={cn(styles.header, {
         [styles.sticky]: sticky,
+        [styles.border_header]: isBlackHeader,
       })}
     >
       <div className={cn("container", styles.container)}>

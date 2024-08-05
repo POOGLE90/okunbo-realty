@@ -3,18 +3,8 @@
 import React from "react";
 import styles from "./hero.module.css";
 import cn from "classnames";
-import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import { TextArea, TextField } from "@/components/elements";
-
-const mapContainerStyle = {
-  width: "100%",
-  height: "500px",
-};
-
-const center = {
-  lat: 37.7749,
-  lng: -122.4194,
-};
+import MapView from "@/components/mapview";
 
 export default function Hero() {
   return (
@@ -57,16 +47,7 @@ export default function Hero() {
         </div>
 
         <div className={styles.map}>
-          {/* API key only works on this website, if you want to use it on your own website, you need to get your own API key from Google Cloud Platform. */}
-          <LoadScript googleMapsApiKey="AIzaSyDQseUyUqI_D7qkfl-RmsmufqWwmAWEFdc">
-            <GoogleMap
-              mapContainerStyle={mapContainerStyle}
-              center={center}
-              zoom={10}
-            >
-              {/* Add any markers or additional features here */}
-            </GoogleMap>
-          </LoadScript>
+          <MapView />
         </div>
 
         <form className={styles.form}>
