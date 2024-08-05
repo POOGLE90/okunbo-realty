@@ -11,16 +11,17 @@ import PropertyListing from "@/components/property-listing";
 import { useSearch } from "@/context/search-context";
 
 export default function Hero({ query }: { query: string }) {
-  const [searchTerm, setSearchTerm] = React.useState<string>(query);
+  const [searchTerm, setSearchTerm] = React.useState(query || "");
   const [filteredListings, setFilteredListings] = React.useState<any[]>([]);
 
   React.useEffect(() => {
-    console.log("Current search term:", searchTerm);
-    console.log("Listings data:", Listings);
+    if (!searchTerm || searchTerm.trim() === "") {
+      setFilteredListings([]);
+      return;
+    }
 
     const result = Listings.flatMap((listing: any) =>
       listing.items.filter((item: any) => {
-        console.log("Checking item:", item); // Log the item being checked
         if (typeof item.address === "string") {
           return item.address.toLowerCase().includes(searchTerm.toLowerCase());
         }
@@ -28,7 +29,6 @@ export default function Hero({ query }: { query: string }) {
       }),
     );
 
-    console.log("Filtered listings:", result);
     setFilteredListings(result);
   }, [searchTerm]);
 
