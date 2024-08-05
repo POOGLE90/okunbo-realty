@@ -723,22 +723,24 @@ const TeamMembers = [
     image: "/images/team/emily-davis.webp",
     name: "Emily Davis",
     title: "Real Estate Agent",
+    phone: "(123) 456-7890",
+    email: "emilydavis@support.com",
     description:
       "Emily Davis has 8 years of experience in the real estate industry, focusing on first-time homebuyers and investment properties.",
     socials: [
       {
         id: 1,
-        icon: Instagram,
+        icon: "instagram",
         link: "#",
       },
       {
         id: 2,
-        icon: Facebook,
+        icon: "facebook",
         link: "#",
       },
       {
         id: 3,
-        icon: Linkedin,
+        icon: "linkedin",
         link: "#",
       },
     ],
@@ -748,6 +750,8 @@ const TeamMembers = [
     image: "/images/team/michael-brown.webp",
     name: "Michael Brown",
     title: "Real Estate Specialist",
+    phone: "(123) 456-7890",
+    email: "michael@support.com",
     description:
       "Michael Brown has 10 years of experience in the real estate industry, specializing in luxury properties and commercial real estate.",
     socials: [
@@ -773,6 +777,8 @@ const TeamMembers = [
     image: "/images/team/david-lee.webp",
     name: "David Lee",
     title: "Real Estate Agent",
+    phone: "(123) 456-7890",
+    email: "davidlee@support.com",
     description:
       "David Lee has 5 years of experience in the real estate industry, specializing in residential properties and investment opportunities.",
     socials: [
@@ -798,6 +804,8 @@ const TeamMembers = [
     image: "/images/team/ryan-cooper.webp",
     name: "Ryan Cooper",
     title: "Real Estate Agent",
+    phone: "(123) 456-7890",
+    email: "ryancooper@support.com",
     description:
       "Ryan Cooper has 5 years of experience in the real estate industry, specializing in residential properties and investment opportunities.",
     socials: [
@@ -823,6 +831,8 @@ const TeamMembers = [
     image: "/images/team/olivia-hernandez.webp",
     name: "Olivia Hernandez",
     title: "Real Estate Agent",
+    phone: "(123) 456-7890",
+    email: "olivia@support.com",
     description:
       "Olivia Hernandez has 8 years of experience in the real estate industry, focusing on first-time homebuyers and investment properties.",
     socials: [
@@ -848,6 +858,8 @@ const TeamMembers = [
     image: "/images/team/ethan-brooks.webp",
     name: "Ethan Brooks",
     title: "Real Estate Agent",
+    phone: "(123) 456-7890",
+    email: "ethanbrooks@support.com",
     description:
       "Ethan Brooks has 3 years of experience in the real estate industry, focusing on first-time homebuyers and investment properties.",
     socials: [

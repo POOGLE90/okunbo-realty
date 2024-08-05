@@ -149,7 +149,10 @@ export default function Overview({ item }: OverviewProps) {
             </div>
           </div>
 
-          <AgentForm />
+          <AgentForm
+            className={styles.form}
+            inputClassName={styles.textfield}
+          />
         </div>
       </div>
     </section>

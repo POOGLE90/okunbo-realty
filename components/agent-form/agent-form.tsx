@@ -3,21 +3,29 @@ import styles from "./agent-form.module.css";
 import cn from "classnames";
 import { TextArea, TextField } from "../elements";
 
-export default function AgentForm() {
+type AgentFormProps = {
+  className?: string;
+  inputClassName?: string;
+};
+
+export default function AgentForm({
+  className,
+  inputClassName,
+}: AgentFormProps) {
   return (
-    <form className={styles.form}>
+    <form className={cn(styles.form, className)}>
       <div className={styles.rowFields}>
         <TextField
           name="name"
           placeholder="First Name"
           required
-          className={styles.textfield}
+          className={cn(styles.textfield, inputClassName)}
         />
         <TextField
           name="name"
           placeholder="Last Name"
           required
-          className={styles.textfield}
+          className={cn(styles.textfield, inputClassName)}
         />
       </div>
 
@@ -25,14 +33,14 @@ export default function AgentForm() {
         name="email"
         placeholder="Email"
         required
-        className={styles.textfield}
+        className={cn(styles.textfield, inputClassName)}
       />
 
       <TextField
         name="phone"
         placeholder="Phone"
         required
-        className={styles.textfield}
+        className={cn(styles.textfield, inputClassName)}
       />
 
       <TextArea

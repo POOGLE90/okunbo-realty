@@ -100,6 +100,11 @@
     color: var(--slate-500);
 }
 
+.form textarea,
+.container .textfield {
+    background-color: var(--white);
+}
+
 @media (max-width: 1024px) {
     .container {
         gap: 64px;

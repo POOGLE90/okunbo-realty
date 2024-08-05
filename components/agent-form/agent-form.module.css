@@ -4,11 +4,6 @@
     gap: 8px;
 }
 
-.form .textarea,
-.form .textfield {
-    background-color: var(--white);
-}
-
 .rowFields {
     display: flex;
     gap: 8px;

@@ -27,9 +27,7 @@ export default function Testimonials() {
   return (
     <section className={cn("section")}>
       <div className={cn("container")}>
-        <div className={cn("subheading-medium", styles.title)}>
-          CLIENT TESTIMONIALS
-        </div>
+        <div className={cn("subheading-medium")}>CLIENT TESTIMONIALS</div>
 
         <div className={styles.testimonials}>
           {testimonials.map((testimonial) => (

@@ -3,6 +3,7 @@ import cn from "classnames";
 import styles from "./team-member.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import AgentSocials from "../agent-socials";
 
 type TeamMemberProps = {
   member: {
@@ -12,7 +13,8 @@ type TeamMemberProps = {
     image: string;
     socials: {
       id: number;
-      icon: React.ReactNode;
+      icon: string;
+      link: string;
     }[];
   };
 };
@@ -45,13 +47,7 @@ export default function TeamMember({ member }: TeamMemberProps) {
           </div>
         </div>
 
-        <div className={styles.member_socials}>
-          {member.socials.map((social) => (
-            <a key={social.id} className={styles.member_social}>
-              {social.icon}
-            </a>
-          ))}
-        </div>
+        <AgentSocials socials={member.socials} />
       </div>
     </div>
   );
