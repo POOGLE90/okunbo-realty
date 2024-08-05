@@ -1,14 +1,16 @@
 import cn from "classnames";
 import Image from "next/image";
 import styles from "./property-listing.module.css";
+import Link from "next/link";
 
 type PropertyListingProps = {
   item: {
     id: number;
-    image: string;
+    images: string[];
     title: string;
     price: string;
     description: string;
+    slug: string;
     features: {
       id: number;
       icon: React.ReactNode;
@@ -21,9 +23,15 @@ type PropertyListingProps = {
 export default function PropertyListing({ item }: PropertyListingProps) {
   return (
     <div key={item.id} className={styles.listing}>
-      <div className={styles.img_holder}>
+      <Link
+        href={{
+          pathname: "/property-detail",
+          query: { item: JSON.stringify(item) },
+        }}
+        className={styles.img_holder}
+      >
         <Image
-          src={item.image}
+          src={item.images && item.images[0]}
           alt={item.title}
           layout="fill"
           objectFit="cover"
@@ -33,7 +41,7 @@ export default function PropertyListing({ item }: PropertyListingProps) {
         <div className={cn("paragraph-small", styles.listing_price)}>
           {item.price}
         </div>
-      </div>
+      </Link>
       <div className={styles.listing_wrapper}>
         <div className={cn("heading-6", styles.listing_title)}>
           {item.title}

@@ -16,7 +16,12 @@ const nav_links = [
   { title: "Agents", href: "/agents" },
 ];
 
-const blackHeaderPages = ["/listings", "/agents", "/contact"];
+const blackHeaderPages = [
+  "/listings",
+  "/agents",
+  "/contact",
+  "/property-detail",
+];
 
 export default function Header() {
   const [visibleNav, setVisibleNav] = React.useState(false);
