@@ -14,6 +14,14 @@
     overflow: hidden;
 }
 
+.member_image img {
+    transition: transform 0.2s;
+}
+
+.member_image img:hover {
+    transform: scale(1.1);
+}
+
 .member_info {
     display: flex;
     justify-content: space-between;

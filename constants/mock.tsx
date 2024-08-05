@@ -723,6 +723,8 @@ const TeamMembers = [
     image: "/images/team/emily-davis.webp",
     name: "Emily Davis",
     title: "Real Estate Agent",
+    description:
+      "Emily Davis has 8 years of experience in the real estate industry, focusing on first-time homebuyers and investment properties.",
     socials: [
       {
         id: 1,
@@ -746,6 +748,8 @@ const TeamMembers = [
     image: "/images/team/michael-brown.webp",
     name: "Michael Brown",
     title: "Real Estate Specialist",
+    description:
+      "Michael Brown has 10 years of experience in the real estate industry, specializing in luxury properties and commercial real estate.",
     socials: [
       {
         id: 1,
@@ -769,6 +773,8 @@ const TeamMembers = [
     image: "/images/team/david-lee.webp",
     name: "David Lee",
     title: "Real Estate Agent",
+    description:
+      "David Lee has 5 years of experience in the real estate industry, specializing in residential properties and investment opportunities.",
     socials: [
       {
         id: 1,
@@ -792,6 +798,8 @@ const TeamMembers = [
     image: "/images/team/ryan-cooper.webp",
     name: "Ryan Cooper",
     title: "Real Estate Agent",
+    description:
+      "Ryan Cooper has 5 years of experience in the real estate industry, specializing in residential properties and investment opportunities.",
     socials: [
       {
         id: 1,
@@ -815,6 +823,8 @@ const TeamMembers = [
     image: "/images/team/olivia-hernandez.webp",
     name: "Olivia Hernandez",
     title: "Real Estate Agent",
+    description:
+      "Olivia Hernandez has 8 years of experience in the real estate industry, focusing on first-time homebuyers and investment properties.",
     socials: [
       {
         id: 1,
@@ -838,6 +848,8 @@ const TeamMembers = [
     image: "/images/team/ethan-brooks.webp",
     name: "Ethan Brooks",
     title: "Real Estate Agent",
+    description:
+      "Ethan Brooks has 3 years of experience in the real estate industry, focusing on first-time homebuyers and investment properties.",
     socials: [
       {
         id: 1,

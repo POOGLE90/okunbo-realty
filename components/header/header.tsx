@@ -21,6 +21,7 @@ const blackHeaderPages = [
   "/agents",
   "/contact",
   "/property-detail",
+  "/agent",
 ];
 
 export default function Header() {
