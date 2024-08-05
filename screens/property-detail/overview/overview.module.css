@@ -49,6 +49,7 @@
     top: 50%;
     transform: translateY(-50%);
     transition: transform 0.3s;
+    flex-shrink: 0;
 }
 
 .detail_head.open svg {
