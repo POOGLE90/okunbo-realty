@@ -6,6 +6,7 @@ import { Hide, Show } from "@/constants/icons";
 type TextFieldProps = {
   type?: string;
   placeholder: string;
+  name?: string;
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
@@ -15,11 +16,13 @@ type TextFieldProps = {
   show?: boolean;
   showPassword?: boolean;
   togglePasswordVisibility?: () => void;
+  required?: boolean;
   error?: boolean;
 };
 
 export default function TextField({
   placeholder,
+  name,
   value,
   onChange,
   className,
@@ -29,6 +32,7 @@ export default function TextField({
   show,
   showPassword,
   togglePasswordVisibility,
+  required,
   error,
   ...props
 }: TextFieldProps) {

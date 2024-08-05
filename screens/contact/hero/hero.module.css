@@ -40,6 +40,29 @@
     margin-top: 80px;
 }
 
+.form {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rowFields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 8px;
+}
+
+.agreeText {
+    color: var(--slate-500);
+}
+
+.agreeText span {
+    font-weight: 500;
+    color: var(--black);
+}
+
 @media (max-width: 1024px) {
     .map {
         margin-top: 64px;
@@ -64,6 +87,10 @@
 
 @media (max-width: 480px) {
     .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .rowFields {
         grid-template-columns: 1fr;
     }
 }
