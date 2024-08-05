@@ -10,7 +10,6 @@ type PropertyListingProps = {
     title: string;
     price: string;
     description: string;
-    slug: string;
     features: {
       id: number;
       icon: React.ReactNode;

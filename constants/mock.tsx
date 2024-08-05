@@ -56,7 +56,6 @@ const Listings = [
           "/images/properties/houses/123-serenity-lane-playground.webp",
         ],
         address: "123 Serenity Lane, Los Angeles, CA",
-        slug: "123-serenity-lane",
         features: [
           {
             id: 1,
