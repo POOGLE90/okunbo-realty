@@ -757,17 +757,17 @@ const TeamMembers = [
     socials: [
       {
         id: 1,
-        icon: Instagram,
+        icon: "instagram",
         link: "#",
       },
       {
         id: 2,
-        icon: Facebook,
+        icon: "facebook",
         link: "#",
       },
       {
         id: 3,
-        icon: Linkedin,
+        icon: "linkedin",
         link: "#",
       },
     ],
@@ -784,17 +784,17 @@ const TeamMembers = [
     socials: [
       {
         id: 1,
-        icon: Instagram,
+        icon: "instagram",
         link: "#",
       },
       {
         id: 2,
-        icon: Facebook,
+        icon: "facebook",
         link: "#",
       },
       {
         id: 3,
-        icon: Linkedin,
+        icon: "linkedin",
         link: "#",
       },
     ],
@@ -811,17 +811,17 @@ const TeamMembers = [
     socials: [
       {
         id: 1,
-        icon: Instagram,
+        icon: "instagram",
         link: "#",
       },
       {
         id: 2,
-        icon: Facebook,
+        icon: "facebook",
         link: "#",
       },
       {
         id: 3,
-        icon: Linkedin,
+        icon: "linkedin",
         link: "#",
       },
     ],
@@ -838,17 +838,17 @@ const TeamMembers = [
     socials: [
       {
         id: 1,
-        icon: Instagram,
+        icon: "instagram",
         link: "#",
       },
       {
         id: 2,
-        icon: Facebook,
+        icon: "facebook",
         link: "#",
       },
       {
         id: 3,
-        icon: Linkedin,
+        icon: "linkedin",
         link: "#",
       },
     ],
@@ -865,17 +865,17 @@ const TeamMembers = [
     socials: [
       {
         id: 1,
-        icon: Instagram,
+        icon: "instagram",
         link: "#",
       },
       {
         id: 2,
-        icon: Facebook,
+        icon: "facebook",
         link: "#",
       },
       {
         id: 3,
-        icon: Linkedin,
+        icon: "linkedin",
         link: "#",
       },
     ],

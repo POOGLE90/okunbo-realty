@@ -1,6 +1,7 @@
 import cn from "classnames";
 import styles from "./search-bar.module.css";
 import { Building, Filter } from "@/constants/icons";
+import Link from "next/link";
 
 type SearchBarProps = {
   placeholder: string;
@@ -23,7 +24,14 @@ export default function SearchBar({ placeholder }: SearchBarProps) {
 
       <div className={styles.breakline} />
 
-      <button className={cn("button", styles.button)}>Search Property</button>
+      <Link
+        href={{
+          pathname: "/search",
+        }}
+        className={cn("button", styles.button)}
+      >
+        Search Property
+      </Link>
     </div>
   );
 }

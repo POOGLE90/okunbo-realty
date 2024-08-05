@@ -47,7 +47,9 @@ export default function Hero({ member }: HeroProps) {
           <div className={cn("paragraph-medium", styles.description)}>
             {member.description}
           </div>
-          <button className={cn("button", styles.button)}>Get In Touch</button>
+          <a href="#contact" className={cn("button", styles.button)}>
+            Get In Touch
+          </a>
         </div>
 
         <div className={styles.listings}>

@@ -25,7 +25,7 @@ type HeroProps = {
 
 export default function Contact({ member }: HeroProps) {
   return (
-    <section className={cn("section")}>
+    <section id="contact" className={cn("section")}>
       <div className={cn("container", styles.container)}>
         <div className={styles.content}>
           <Heading type="heading-3">Ready to Find Your Dream Home?</Heading>
