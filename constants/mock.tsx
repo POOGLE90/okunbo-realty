@@ -1,15 +1,4 @@
-import {
-  Bath,
-  DockDoor,
-  DoubleBed,
-  Facebook,
-  Floor,
-  Instagram,
-  Linkedin,
-  Parking,
-  Ruler,
-  Walk,
-} from "./icons";
+import { Facebook, Instagram, Linkedin } from "./icons";
 
 const Tabs = [
   {
@@ -59,19 +48,19 @@ const Listings = [
         features: [
           {
             id: 1,
-            icon: DoubleBed,
+            icon: "double-bed",
             name: "bd",
             value: 3,
           },
           {
             id: 2,
-            icon: Bath,
+            icon: "bath",
             name: "ba",
             value: 2,
           },
           {
             id: 3,
-            icon: Ruler,
+            icon: "ruler",
             name: "sqft",
             value: "2,500",
           },
@@ -97,19 +86,19 @@ const Listings = [
         features: [
           {
             id: 1,
-            icon: DoubleBed,
+            icon: "double-bed",
             name: "bd",
             value: 4,
           },
           {
             id: 2,
-            icon: Bath,
+            icon: "bath",
             name: "ba",
             value: 3,
           },
           {
             id: 3,
-            icon: Ruler,
+            icon: "ruler",
             name: "sqft",
             value: "4,500",
           },
@@ -135,19 +124,19 @@ const Listings = [
         features: [
           {
             id: 1,
-            icon: DoubleBed,
+            icon: "double-bed",
             name: "bd",
             value: 3,
           },
           {
             id: 2,
-            icon: Bath,
+            icon: "bath",
             name: "ba",
             value: 2.5,
           },
           {
             id: 3,
-            icon: Ruler,
+            icon: "ruler",
             name: "sqft",
             value: "3,200",
           },
@@ -180,19 +169,19 @@ const Listings = [
         features: [
           {
             id: 1,
-            icon: DoubleBed,
+            icon: "double-bed",
             name: "bd",
             value: 2,
           },
           {
             id: 2,
-            icon: Bath,
+            icon: "bath",
             name: "ba",
             value: 2,
           },
           {
             id: 3,
-            icon: Ruler,
+            icon: "ruler",
             name: "sqft",
             value: "1,800",
           },
@@ -218,19 +207,19 @@ const Listings = [
         features: [
           {
             id: 1,
-            icon: DoubleBed,
+            icon: "double-bed",
             name: "bd",
             value: 3,
           },
           {
             id: 2,
-            icon: Bath,
+            icon: "bath",
             name: "ba",
             value: 2.5,
           },
           {
             id: 3,
-            icon: Ruler,
+            icon: "ruler",
             name: "sqft",
             value: "2,000",
           },
@@ -256,19 +245,19 @@ const Listings = [
         features: [
           {
             id: 1,
-            icon: DoubleBed,
+            icon: "double-bed",
             name: "bd",
             value: 3,
           },
           {
             id: 2,
-            icon: Bath,
+            icon: "bath",
             name: "ba",
             value: 2,
           },
           {
             id: 3,
-            icon: Ruler,
+            icon: "ruler",
             name: "sqft",
             value: "2,200",
           },
@@ -300,19 +289,19 @@ const Listings = [
         features: [
           {
             id: 1,
-            icon: DoubleBed,
+            icon: "double-bed",
             name: "bd",
             value: 2,
           },
           {
             id: 2,
-            icon: Bath,
+            icon: "bath",
             name: "ba",
             value: 2,
           },
           {
             id: 3,
-            icon: Ruler,
+            icon: "ruler",
             name: "sqft",
             value: "1,500",
           },
@@ -338,19 +327,19 @@ const Listings = [
         features: [
           {
             id: 1,
-            icon: DoubleBed,
+            icon: "double-bed",
             name: "bd",
             value: 1,
           },
           {
             id: 2,
-            icon: Bath,
+            icon: "bath",
             name: "ba",
             value: 1,
           },
           {
             id: 3,
-            icon: Ruler,
+            icon: "ruler",
             name: "sqft",
             value: "1,200",
           },
@@ -376,19 +365,19 @@ const Listings = [
         features: [
           {
             id: 1,
-            icon: DoubleBed,
+            icon: "double-bed",
             name: "bd",
             value: 2,
           },
           {
             id: 2,
-            icon: Bath,
+            icon: "bath",
             name: "ba",
             value: 1.5,
           },
           {
             id: 3,
-            icon: Ruler,
+            icon: "ruler",
             name: "sqft",
             value: "1,300",
           },
@@ -420,19 +409,19 @@ const Listings = [
         features: [
           {
             id: 1,
-            icon: Ruler,
+            icon: "ruler",
             name: "sqft",
             value: "5,000",
           },
           {
             id: 2,
-            icon: Floor,
+            icon: "floor",
             name: "Floors",
             value: 2,
           },
           {
             id: 3,
-            icon: Parking,
+            icon: "parking",
             name: "Parking",
             value: "Yes",
           },
@@ -458,19 +447,19 @@ const Listings = [
         features: [
           {
             id: 1,
-            icon: Ruler,
+            icon: "ruler",
             name: "sqft",
             value: "20,000",
           },
           {
             id: 2,
-            icon: DockDoor,
+            icon: "dock-door",
             name: "Dock Doors",
             value: 4,
           },
           {
             id: 3,
-            icon: Parking,
+            icon: "parking",
             name: "Parking",
             value: "Yes",
           },
@@ -496,19 +485,19 @@ const Listings = [
         features: [
           {
             id: 1,
-            icon: Ruler,
+            icon: "ruler",
             name: "sqft",
             value: "3,000",
           },
           {
             id: 2,
-            icon: Walk,
+            icon: "walk",
             name: "Foot Traffic",
             value: "High",
           },
           {
             id: 3,
-            icon: Parking,
+            icon: "parking",
             name: "Parking",
             value: "Yes",
           },
@@ -540,19 +529,19 @@ const Listings = [
         features: [
           {
             id: 1,
-            icon: DoubleBed,
+            icon: "double-bed",
             name: "bd",
             value: 5,
           },
           {
             id: 2,
-            icon: Bath,
+            icon: "bath",
             name: "ba",
             value: 4,
           },
           {
             id: 3,
-            icon: Parking,
+            icon: "parking",
             name: "sqft",
             value: "4,500",
           },
@@ -578,19 +567,19 @@ const Listings = [
         features: [
           {
             id: 1,
-            icon: DoubleBed,
+            icon: "double-bed",
             name: "bd",
             value: 4,
           },
           {
             id: 2,
-            icon: Bath,
+            icon: "bath",
             name: "ba",
             value: 3,
           },
           {
             id: 3,
-            icon: Ruler,
+            icon: "ruler",
             name: "sqft",
             value: "3,800",
           },
@@ -616,19 +605,19 @@ const Listings = [
         features: [
           {
             id: 1,
-            icon: DoubleBed,
+            icon: "double-bed",
             name: "bd",
             value: 6,
           },
           {
             id: 2,
-            icon: Bath,
+            icon: "bath",
             name: "ba",
             value: 5,
           },
           {
             id: 3,
-            icon: Ruler,
+            icon: "ruler",
             name: "sqft",
             value: "7,200",
           },

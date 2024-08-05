@@ -2,6 +2,7 @@ import cn from "classnames";
 import Image from "next/image";
 import styles from "./property-listing.module.css";
 import Link from "next/link";
+import PropertyFeatures from "../property-features";
 
 type PropertyListingProps = {
   item: {
@@ -12,7 +13,7 @@ type PropertyListingProps = {
     description: string;
     features: {
       id: number;
-      icon: React.ReactNode;
+      icon: string;
       name: string;
       value: string | number;
     }[];
@@ -49,16 +50,10 @@ export default function PropertyListing({ item }: PropertyListingProps) {
           {item.description}
         </div>
 
-        <div className={styles.features}>
-          {item.features.map((feature) => (
-            <div key={feature.id} className={styles.feature}>
-              {feature.icon}
-              <div className={cn("paragraph-small", styles.feature_name)}>
-                {feature.value}
-              </div>
-            </div>
-          ))}
-        </div>
+        <PropertyFeatures
+          features={item.features}
+          className={styles.features}
+        />
       </div>
     </div>
   );
