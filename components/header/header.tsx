@@ -16,7 +16,7 @@ const nav_links = [
   { title: "Agents", href: "/agents" },
 ];
 
-const blackHeaderPages = ["/listings", "/agents"];
+const blackHeaderPages = ["/listings", "/agents", "/contact"];
 
 export default function Header() {
   const [visibleNav, setVisibleNav] = React.useState(false);
@@ -127,15 +127,15 @@ export default function Header() {
         </motion.nav>
 
         <div className={styles.button_wrapper}>
-          <button
+          <Link
+            href="/contact"
             className={cn("button-stroke-small", styles.button, {
               [styles.black_button]: isBlackHeader && !(mobile && visibleNav),
               [styles.sticky_button]: sticky,
             })}
-            onClick={(e) => handleScrollSection(e, "#contact")}
           >
             Get In Touch
-          </button>
+          </Link>
 
           <Burger
             className={styles.burger}
