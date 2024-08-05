@@ -10,16 +10,22 @@ import { Listings } from "@/constants/mock";
 import PropertyListing from "@/components/property-listing";
 import { useSearch } from "@/context/search-context";
 
-export default function Hero() {
-  const { searchTerm, setSearchTerm } = useSearch();
-  const [filteredListings, setFilteredListings] = React.useState([]);
+export default function Hero({ query }: { query: string }) {
+  const [searchTerm, setSearchTerm] = React.useState<string>(query);
+  const [filteredListings, setFilteredListings] = React.useState<any[]>([]);
 
   React.useEffect(() => {
-    // Filter and flatten the listings based on address
-    const result = Listings.flatMap((listing) =>
-      listing.items.filter((item) =>
-        item.address.toLowerCase().includes(searchTerm.toLowerCase()),
-      ),
+    console.log("Current search term:", searchTerm);
+    console.log("Listings data:", Listings);
+
+    const result = Listings.flatMap((listing: any) =>
+      listing.items.filter((item: any) => {
+        console.log("Checking item:", item); // Log the item being checked
+        if (typeof item.address === "string") {
+          return item.address.toLowerCase().includes(searchTerm.toLowerCase());
+        }
+        return false;
+      }),
     );
 
     console.log("Filtered listings:", result);
@@ -45,7 +51,10 @@ export default function Hero() {
         <SearchBar
           placeholder="Enter an address, neighborhood, city or ZIP code"
           searchTerm={searchTerm}
-          onSearchTermChange={setSearchTerm}
+          onSearchTermChange={(term) => {
+            console.log("Search term changed to:", term);
+            setSearchTerm(term);
+          }}
         />
       </div>
 
@@ -57,7 +66,7 @@ export default function Hero() {
                 <PropertyListing key={item.id} item={item} />
               ))
             ) : (
-              <p>No results found</p>
+              <p className={cn("paragraph-medium")}>No results found</p>
             )}
           </div>
         </div>

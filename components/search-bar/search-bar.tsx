@@ -16,11 +16,7 @@ export default function SearchBar({
   searchTerm,
   onSearchTermChange,
 }: SearchBarProps) {
-  const pathname = usePathname();
-
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log("Search Term Changed:", event.target.value);
-
     onSearchTermChange(event.target.value);
   };
 
