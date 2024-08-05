@@ -1,10 +1,10 @@
 import Layout from "@/components/Layout";
 import Hero from "./hero";
 
-export default function SearchPage() {
+export default function SearchPage({ query }: any) {
   return (
     <Layout>
-      <Hero />
+      <Hero query={query} />
     </Layout>
   );
 }

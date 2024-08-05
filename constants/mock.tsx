@@ -1,5 +1,3 @@
-import { Facebook, Instagram, Linkedin } from "./icons";
-
 const Tabs = [
   {
     id: 1,

@@ -1,11 +1,31 @@
+"use client";
+
 import React from "react";
 import styles from "./hero.module.css";
 import cn from "classnames";
-import { Heading, Hero as HeroTitle } from "@/components/typography";
+import { Hero as HeroTitle } from "@/components/typography";
 import Image from "next/image";
 import SearchBar from "@/components/search-bar";
+import { Listings } from "@/constants/mock";
+import PropertyListing from "@/components/property-listing";
+import { useSearch } from "@/context/search-context";
 
 export default function Hero() {
+  const { searchTerm, setSearchTerm } = useSearch();
+  const [filteredListings, setFilteredListings] = React.useState([]);
+
+  React.useEffect(() => {
+    // Filter and flatten the listings based on address
+    const result = Listings.flatMap((listing) =>
+      listing.items.filter((item) =>
+        item.address.toLowerCase().includes(searchTerm.toLowerCase()),
+      ),
+    );
+
+    console.log("Filtered listings:", result);
+    setFilteredListings(result);
+  }, [searchTerm]);
+
   return (
     <>
       <div className={styles.img_container}>
@@ -22,34 +42,23 @@ export default function Hero() {
           Search Results
         </HeroTitle>
 
-        <SearchBar placeholder="Enter an address, neighborhood, city or ZIP code" />
+        <SearchBar
+          placeholder="Enter an address, neighborhood, city or ZIP code"
+          searchTerm={searchTerm}
+          onSearchTermChange={setSearchTerm}
+        />
       </div>
 
       <section className={cn("section", styles.section)}>
         <div className={cn("container", styles.container)}>
-          <div className={styles.content}>
-            <Heading type="heading-3">
-              Find your dream home with our curated listings and expert
-              guidance.
-            </Heading>
-
-            <div className={styles.stack}>
-              <div className={styles.card}>
-                <div className={cn("paragraph-large", styles.card_subtitle)}>
-                  Property Investments
-                </div>
-                <div className={cn("heading-3")}>$1B+</div>
-              </div>
-
-              <div className={styles.card}>
-                <Image
-                  src="/images/intro.webp"
-                  alt="Picture of the author"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-            </div>
+          <div className={styles.properties}>
+            {filteredListings.length > 0 ? (
+              filteredListings.map((item) => (
+                <PropertyListing key={item.id} item={item} />
+              ))
+            ) : (
+              <p>No results found</p>
+            )}
           </div>
         </div>
       </section>

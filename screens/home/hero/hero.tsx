@@ -1,11 +1,16 @@
+"use client";
+
 import React from "react";
 import styles from "./hero.module.css";
 import cn from "classnames";
 import { Heading, Hero as HeroTitle } from "@/components/typography";
 import Image from "next/image";
 import SearchBar from "@/components/search-bar";
+import { useSearch } from "@/context/search-context";
 
 export default function Hero() {
+  const { searchTerm, setSearchTerm } = useSearch();
+
   return (
     <>
       <div className={styles.img_container}>
@@ -23,7 +28,11 @@ export default function Hero() {
           Home Sweet Home.
         </HeroTitle>
 
-        <SearchBar placeholder="Enter an address, neighborhood, city or ZIP code" />
+        <SearchBar
+          placeholder="Enter an address, neighborhood, city or ZIP code"
+          searchTerm={searchTerm}
+          onSearchTermChange={setSearchTerm}
+        />
       </div>
 
       <section className={cn("section", styles.section)}>

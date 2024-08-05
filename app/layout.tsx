@@ -2,6 +2,7 @@ import { DM_Sans, Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "../styles/index.css";
 import cn from "classnames";
 import localFont from "next/font/local";
+import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -39,7 +40,7 @@ export default function RootLayout({ children }: LayoutProps) {
           authorSemibold.variable,
         )}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
