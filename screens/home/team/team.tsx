@@ -26,7 +26,7 @@ export default function Team() {
         </div>
 
         <div className={styles.team_members}>
-          {TeamMembers.map((member) => (
+          {TeamMembers.slice(0, 3).map((member) => (
             <TeamMember key={member.id} member={member} />
           ))}
         </div>
