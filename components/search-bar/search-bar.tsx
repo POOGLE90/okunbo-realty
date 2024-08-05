@@ -9,7 +9,6 @@ type SearchBarProps = {
   placeholder: string;
   searchTerm: string;
   onSearchTermChange: (term: string) => void;
-  onSearch: () => void;
 };
 
 export default function SearchBar({
