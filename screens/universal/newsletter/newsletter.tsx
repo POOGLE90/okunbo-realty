@@ -3,6 +3,7 @@ import styles from "./newsletter.module.css";
 import cn from "classnames";
 import { Bag, Notification } from "@/constants/icons";
 import { TextField } from "@/components/elements";
+import Link from "next/link";
 
 export default function Newsletter() {
   return (
@@ -25,7 +26,9 @@ export default function Newsletter() {
               </div>
             </div>
             <div className={styles.wrapper}>
-              <button className={cn("button", styles.button)}>Our Story</button>
+              <Link href="/about" className={cn("button", styles.button)}>
+                Our Story
+              </Link>
               <button className={cn("button-stroke", styles.button)}>
                 Join Us
               </button>

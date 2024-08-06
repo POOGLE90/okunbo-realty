@@ -7,6 +7,7 @@ import { Heading } from "@/components/typography";
 import { Listings, Tabs } from "@/constants/mock";
 import { Dropdown } from "@/components/elements";
 import PropertyListing from "@/components/property-listing";
+import Link from "next/link";
 
 export default function LatestListings() {
   const [selectedCategory, setSelectedCategory] = React.useState(Tabs[0].name);
@@ -34,9 +35,9 @@ export default function LatestListings() {
             </div>
           </div>
 
-          <button className={cn("button", styles.button)}>
+          <Link href="/listings" className={cn("button", styles.button)}>
             View All Listings
-          </button>
+          </Link>
         </div>
 
         <div className={styles.wrapper}>

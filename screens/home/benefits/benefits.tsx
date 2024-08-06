@@ -4,6 +4,7 @@ import cn from "classnames";
 import { Heading } from "@/components/typography";
 import Image from "next/image";
 import { Checkmark } from "@/constants/icons";
+import Link from "next/link";
 
 const benefits = [
   {
@@ -80,7 +81,9 @@ export default function Benefits() {
               ))}
             </ul>
 
-            <button className={cn("button", styles.button)}>Learn more</button>
+            <Link href="/about" className={cn("button", styles.button)}>
+              Learn more
+            </Link>
           </div>
         </div>
       ))}

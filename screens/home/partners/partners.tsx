@@ -4,6 +4,7 @@ import cn from "classnames";
 import Image from "next/image";
 import { Heading } from "@/components/typography";
 import { Bankrate, Corning, Flexport } from "@/constants/icons";
+import Link from "next/link";
 
 export default function Partners() {
   return (
@@ -18,7 +19,9 @@ export default function Partners() {
             include some of the most respected names in the real estate and
             related industries.
           </p>
-          <button className={cn("button", styles.button)}>Learn More</button>
+          <Link href="/about" className={cn("button", styles.button)}>
+            Learn More
+          </Link>
         </div>
         <div className={styles.partners}>
           <div className={styles.image_container}>

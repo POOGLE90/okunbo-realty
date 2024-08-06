@@ -3,6 +3,7 @@ import cn from "classnames";
 import styles from "./categories.module.css";
 import { Heading } from "@/components/typography";
 import Image from "next/image";
+import Link from "next/link";
 
 const categories = [
   {
@@ -51,9 +52,9 @@ export default function Categories() {
             </div>
           </div>
 
-          <button className={cn("button button-primary")}>
+          <Link href="/listings" className={cn("button button-primary")}>
             View All Categories
-          </button>
+          </Link>
         </div>
 
         <div className={styles.categories}>
