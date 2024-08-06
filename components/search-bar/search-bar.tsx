@@ -3,7 +3,6 @@ import cn from "classnames";
 import styles from "./search-bar.module.css";
 import { Building, Filter } from "@/constants/icons";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
 
 type SearchBarProps = {
   placeholder: string;
@@ -16,8 +15,17 @@ export default function SearchBar({
   searchTerm,
   onSearchTermChange,
 }: SearchBarProps) {
+  const [loading, setLoading] = React.useState(false);
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    onSearchTermChange(event.target.value);
+    const newValue = event.target.value;
+    onSearchTermChange(newValue);
+
+    setLoading(true);
+
+    // Simulate a search operation with a timeout
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Simulate a 1-second loading time
   };
 
   return (
@@ -33,7 +41,11 @@ export default function SearchBar({
         />
 
         <div className={styles.divider} />
-        <div className={styles.icon}>{Filter}</div>
+        {loading ? (
+          <div className={styles.spinner} />
+        ) : (
+          <div className={styles.icon}>{Filter}</div>
+        )}
       </div>
 
       <div className={styles.breakline} />

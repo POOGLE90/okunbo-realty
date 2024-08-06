@@ -8,7 +8,6 @@ import Image from "next/image";
 import SearchBar from "@/components/search-bar";
 import { Listings } from "@/constants/mock";
 import PropertyListing from "@/components/property-listing";
-import { useSearch } from "@/context/search-context";
 
 export default function Hero({ query }: { query: string }) {
   const [searchTerm, setSearchTerm] = React.useState(query || "");

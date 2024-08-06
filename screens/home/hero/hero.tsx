@@ -6,10 +6,9 @@ import cn from "classnames";
 import { Heading, Hero as HeroTitle } from "@/components/typography";
 import Image from "next/image";
 import SearchBar from "@/components/search-bar";
-import { useSearch } from "@/context/search-context";
 
 export default function Hero() {
-  const { searchTerm, setSearchTerm } = useSearch();
+  const [searchTerm, setSearchTerm] = React.useState("");
 
   return (
     <>
