@@ -1,0 +1,51 @@
+.title_container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 48px;
+}
+
+.subtitle {
+    color: var(--n-60);
+    margin-bottom: 16px;
+}
+
+.title {
+    margin-bottom: 16px;
+}
+
+.description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--n-60);
+}
+
+.marquees {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.marquee_text {
+    color: var(--black);
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.marquee_text:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .title_container {
+        padding: 0 24px;
+        margin-bottom: 32px;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .marquees {
+        gap: 16px;
+    }
+}

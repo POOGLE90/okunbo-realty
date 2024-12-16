@@ -11,17 +11,18 @@ import { usePathname } from "next/navigation";
 
 const nav_links = [
   { title: "Home", href: "/" },
-  { title: "About us", href: "/about" },
   { title: "Listings", href: "/listings" },
-  { title: "Agents", href: "/agents" },
+  { title: "Home Valuation", href: "/home-valuation" },
+  { title: "Blog", href: "/blog" },
+  { title: "The Realtors Studio", href: "https://www.therealtorsstudio.com", external: true },
 ];
 
 const blackHeaderPages = [
   "/listings",
-  "/agents",
+  "/home-valuation",
   "/contact",
   "/property-detail",
-  "/agent",
+  "/blog",
 ];
 
 export default function Header() {
@@ -90,7 +91,7 @@ export default function Header() {
     }
   };
 
-  const isBlackHeader = blackHeaderPages.includes(pathname);
+  const isBlackHeader = blackHeaderPages.some(page => pathname.startsWith(page));
 
   return (
     <header
@@ -118,17 +119,32 @@ export default function Header() {
         >
           <div className={styles.nav_links}>
             {nav_links.map((link, index) => (
-              <Link
-                key={index}
-                href={link.href}
-                className={cn("label-small", styles.nav_link, {
-                  [styles.active]: pathname === link.href,
-                  [styles.black_link]: isBlackHeader && !(mobile && visibleNav),
-                  [styles.sticky_link]: sticky,
-                })}
-              >
-                {link.title}
-              </Link>
+              link.external ? (
+                <a
+                  key={index}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn("label-small", styles.nav_link, {
+                    [styles.black_link]: isBlackHeader && !(mobile && visibleNav),
+                    [styles.sticky_link]: sticky,
+                  })}
+                >
+                  {link.title}
+                </a>
+              ) : (
+                <Link
+                  key={index}
+                  href={link.href}
+                  className={cn("label-small", styles.nav_link, {
+                    [styles.active]: pathname === link.href || pathname.startsWith(`${link.href}/`),
+                    [styles.black_link]: isBlackHeader && !(mobile && visibleNav),
+                    [styles.sticky_link]: sticky,
+                  })}
+                >
+                  {link.title}
+                </Link>
+              )
             ))}
           </div>
         </motion.nav>

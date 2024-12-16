@@ -28,9 +28,10 @@ export default function Showcase() {
         <div className={styles.video_wrapper}>
           <Image
             src="/images/video.webp"
-            layout="fill"
-            objectFit="cover"
             alt="video"
+            fill
+            sizes="(max-width: 768px) 100vw, 80vw"
+            style={{ objectFit: "cover" }}
           />
 
           <div className={styles.play_button} onClick={() => setVisible(true)}>

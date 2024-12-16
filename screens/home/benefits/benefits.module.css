@@ -1,80 +1,94 @@
-.container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 80px;
-    align-items: center;
+.benefits {
+  padding: 120px 0;
+  background: var(--white);
 }
 
-.container:nth-child(2) {
-    margin-top: 80px;
+.benefits_content {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  align-items: center;
 }
 
-.container:nth-child(even) {
-    grid-template-areas: "image content";
+.benefits_image {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  object-fit: cover;
 }
 
-.container:nth-child(odd) {
-    grid-template-areas: "content image";
+.benefits_info {
+  grid-column: 2;
 }
 
-.image {
-    grid-area: image;
-    position: relative;
-    height: 100%;
-    width: 100%;
-    border-radius: 24px;
-    overflow: hidden;
+.benefits_header {
+  text-align: center;
+  margin-bottom: 48px;
 }
 
-.content {
-    grid-area: content;
+.benefits_header p {
+  margin-top: 16px;
+  color: var(--slate-500);
+  font-size: 18px;
+  line-height: 1.6;
 }
 
-.subtitle {
-    margin-top: 24px;
-    color: var(--slate-500);
+.benefits_list {
+  display: grid;
+  gap: 32px;
 }
 
-.list {
-    margin-top: 32px;
-    display: grid;
-    gap: 16px;
+.benefits_item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--slate-900);
 }
 
-.item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.benefits_item p {
+  color: var(--slate-500);
+  line-height: 1.6;
 }
 
-.icon svg {
-    fill: var(--orange-600);
-    width: 18px;
-    height: 18px;
-}
+@media (max-width: 1024px) {
+  .benefits_content {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+  }
 
-.button {
-    margin-top: 32px;
+  .benefits_info {
+    grid-column: 1;
+    order: -1;
+  }
+
+  .benefits_image {
+    height: 400px;
+  }
 }
 
 @media (max-width: 768px) {
-    .container {
-        display: flex;
-        flex-direction: column;
-        gap: 48px;
-    }
+  .benefits {
+    padding: 80px 0;
+  }
 
-    .image {
-        height: 400px;
-    }
+  .benefits_header {
+    margin-bottom: 32px;
+  }
+
+  .benefits_list {
+    gap: 24px;
+  }
 }
 
 @media (max-width: 480px) {
-    .container {
-        gap: 32px;
-    }
+  .benefits {
+    padding: 60px 0;
+  }
 
-    .image {
-        height: 300px;
-    }
+  .benefits_image {
+    height: 300px;
+  }
 }

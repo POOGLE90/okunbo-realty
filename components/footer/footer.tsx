@@ -4,53 +4,28 @@ import cn from "classnames";
 import Logo from "../logo";
 import { Heading } from "../typography";
 import Link from "next/link";
-import { Facebook, Instagram, Linkedin, Youtube } from "@/constants/icons";
+import { Facebook, Instagram, Youtube } from "@/constants/icons";
 
 const links = [
   {
     id: 1,
-    title: "Benefits",
-    url: "#",
+    title: "Home",
+    url: "/",
   },
   {
     id: 2,
-    title: "Ofices",
-    url: "#",
+    title: "Listings",
+    url: "/listings",
   },
   {
     id: 3,
-    title: "Services",
-    url: "#",
+    title: "Home Valuation",
+    url: "/home-valuation",
   },
   {
     id: 4,
-    title: "Testimonials",
-    url: "#",
-  },
-  {
-    id: 5,
-    title: "Newsletter",
-    url: "#",
-  },
-  {
-    id: 6,
-    title: "Home",
-    url: "#",
-  },
-  {
-    id: 7,
-    title: "About us",
-    url: "#",
-  },
-  {
-    id: 8,
-    title: "Listings",
-    url: "#",
-  },
-  {
-    id: 9,
-    title: "Agents",
-    url: "#",
+    title: "Contact",
+    url: "/contact",
   },
 ];
 
@@ -59,25 +34,19 @@ const socials = [
     id: 1,
     icon: Instagram,
     title: "Instagram",
-    url: "#",
+    url: "https://www.instagram.com/okunborealty/",
   },
   {
     id: 2,
-    icon: Facebook,
-    title: "Facebook",
-    url: "#",
+    icon: Youtube,
+    title: "Youtube",
+    url: "https://www.youtube.com/@TheRealtorStudio",
   },
   {
     id: 3,
-    icon: Linkedin,
-    title: "Linkedin",
-    url: "#",
-  },
-  {
-    id: 4,
-    icon: Youtube,
-    title: "Youtube",
-    url: "#",
+    icon: Facebook,
+    title: "Facebook",
+    url: "https://www.facebook.com/OkunboRealty",
   },
 ];
 
@@ -90,10 +59,10 @@ export default function Footer() {
 
           <div>
             <Heading type="heading-3" className={styles.title}>
-              Building Dreams, One Home at a Time.
+              Osaze Okunbo - Okunbo Realty
             </Heading>
             <div className={cn("subheading-small", styles.email)}>
-              HEAVENHOMES@INFO.COM
+              OkunboRealty@Gmail.com
             </div>
           </div>
         </div>
@@ -104,10 +73,12 @@ export default function Footer() {
           <div className={styles.business_info}>
             <div>
               <div className={cn("paragraph-small", styles.address)}>
-                123 Main Street, Hometown, USA
+                15303 Ventura Blvd Bldg C Suite 400
+                <br />
+                Sherman Oaks, CA, 91403
               </div>
               <div className={cn("paragraph-small", styles.phone)}>
-                (123) 456-7890
+                818-857-1591
               </div>
             </div>
 
@@ -126,7 +97,7 @@ export default function Footer() {
             </div>
 
             <div className={cn("paragraph-small", styles.copyright)}>
-              © 2024 Elektra. All rights reserved.
+              © {new Date().getFullYear()} Okunbo Realty. All rights reserved.
             </div>
           </div>
 

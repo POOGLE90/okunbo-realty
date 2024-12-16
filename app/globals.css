@@ -31,3 +31,19 @@ body {
     text-wrap: balance;
   }
 }
+
+/* RealScout widget customization */
+realscout-advanced-search {
+  --rs-primary-color: var(--orange-500);
+  --rs-button-background: var(--orange-500);
+  --rs-button-hover-background: var(--orange-600);
+  width: 100%;
+}
+
+realscout-office-listings {
+  --rs-listing-divider-color: var(--slate-200);
+  --rs-primary-color: var(--orange-500);
+  --rs-button-background: var(--orange-500);
+  --rs-button-hover-background: var(--orange-600);
+  width: 100%;
+}

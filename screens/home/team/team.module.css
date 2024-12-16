@@ -1,46 +1,114 @@
 .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 48px;
 }
 
 .title_container {
     max-width: 600px;
+    margin: 0 auto;
 }
 
 .subtitle {
-    margin-top: 24px;
-    color: var(--slate-500);
+    color: var(--n-60);
+    margin-top: 16px;
 }
 
-.team_members {
-    margin-top: 80px;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 32px;
+.agent_profile {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-@media (max-width: 1024px) {
-    .team_members {
-        margin-top: 64px;
+.image_container {
+    flex: 0 0 400px;
+}
+
+.agent_image {
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.agent_info {
+    flex: 1;
+    text-align: left;
+}
+
+.agent_name {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: var(--black);
+}
+
+.agent_bio {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--n-60);
+    margin-bottom: 32px;
+}
+
+.social_links {
+    display: flex;
+    gap: 16px;
+}
+
+.social_link {
+    padding: 12px 24px;
+    border: 2px solid var(--black);
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.social_link:hover {
+    background-color: var(--black);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1023px) {
+    .agent_profile {
+        flex-direction: column;
+        gap: 32px;
+        padding: 0 24px;
+    }
+
+    .image_container {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .agent_info {
+        text-align: center;
+    }
+
+    .social_links {
+        justify-content: center;
     }
 }
 
 @media (max-width: 768px) {
     .content {
+        margin-bottom: 32px;
+    }
+
+    .agent_name {
+        font-size: 1.75rem;
+    }
+
+    .agent_bio {
+        font-size: 1rem;
+    }
+
+    .social_links {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 32px;
     }
 
-    .team_members {
-        margin-top: 48px;
-        grid-template-columns: repeat(2, auto);
-    }
-}
-
-@media (max-width: 480px) {
-    .team_members {
-        grid-template-columns: repeat(1, auto);
+    .social_link {
+        text-align: center;
     }
 }

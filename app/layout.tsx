@@ -3,6 +3,8 @@ import "../styles/index.css";
 import cn from "classnames";
 import localFont from "next/font/local";
 import { Providers } from "./providers";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -20,9 +22,9 @@ const authorSemibold = localFont({
 });
 
 export const metadata = {
-  title: "HeavenHomes - Real Estate Website Template",
+  title: "Okunbo Realty - Real Estate Website",
   description:
-    "heavenhomes is a real estate website template that helps you to find the best property for you.",
+    "Okunbo Realty is a real estate website that helps you to find the best property for you.",
 };
 
 type LayoutProps = {
@@ -32,6 +34,22 @@ type LayoutProps = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
+      <head>
+        <script 
+          src="https://em.realscout.com/widgets/realscout-web-components.umd.js" 
+          type="module"
+        />
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              realscout-office-listings {
+                --rs-listing-divider-color: rgb(101, 141, 172);
+                width: 100%;
+              }
+            `
+          }}
+        />
+      </head>
       <body
         className={cn(
           inter.variable,
@@ -40,7 +58,11 @@ export default function RootLayout({ children }: LayoutProps) {
           authorSemibold.variable,
         )}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

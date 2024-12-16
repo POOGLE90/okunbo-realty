@@ -1,69 +1,48 @@
 .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.title {
+  margin-bottom: 16px;
 }
 
 .subtitle {
-    margin-top: 16px;
-    color: var(--slate-500);
+  color: var(--n-60);
+  max-width: 480px;
+}
+
+.button {
+  white-space: nowrap;
 }
 
 .wrapper {
-    margin-top: 80px;
+  position: relative;
 }
 
 .listings {
-    margin-top: 48px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  margin-top: 32px;
+}
+
+/* RealScout widget styles */
+.listings :global(realscout-office-listings) {
+  --rs-listing-divider-color: rgb(101, 141, 172);
+  width: 100%;
+  display: block;
+  min-height: 600px;
+}
+
+@media (max-width: 1023px) {
+  .content {
+    flex-direction: column;
+    align-items: stretch;
     gap: 24px;
-}
+  }
 
-.dropdown {
-    display: none;
-}
-
-.tabs {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid var(--slate-200);
-}
-
-.tab {
-    padding: 16px 24px;
-    cursor: pointer;
-    transition: all 0.3s;
-    color: var(--slate-400);
-}
-
-.tab.active {
-    color: var(--black);
-}
-
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
-    }
-
-    .listings {
-        grid-template-columns: repeat(2, 1fr);
-        grid-row-gap: 48px;
-    }
-}
-
-@media (max-width: 480px) {
-    .dropdown {
-        display: block;
-    }
-
-    .tabs {
-        display: none;
-    }
-
-    .listings {
-        grid-template-columns: 1fr;
-    }
+  .button {
+    width: 100%;
+  }
 }

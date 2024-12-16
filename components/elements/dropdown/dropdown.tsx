@@ -3,7 +3,7 @@
 import React from "react";
 import cn from "classnames";
 import styles from "./dropdown.module.css";
-import { ChevronDown } from "@/constants/icons";
+import { ChevronDown } from "../../../constants/icons";
 
 type Option = {
   value: number | string;
@@ -26,15 +26,18 @@ export default function Dropdown({
   selectClassName,
   withIcon = false,
   icon,
+  value,
+  onChange,
   ...props
 }: DropdownProps) {
   return (
     <div className={cn(styles.container, className)}>
       <select
         required
+        value={value}
+        onChange={onChange}
         {...props}
         className={cn("label-medium", styles.select, selectClassName)}
-        defaultValue=""
       >
         {options.map((option) => (
           <option key={option.value} value={option.value}>

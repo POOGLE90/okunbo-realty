@@ -3,62 +3,104 @@
 import React from "react";
 import styles from "./hero.module.css";
 import cn from "classnames";
-import { Heading, Hero as HeroTitle } from "@/components/typography";
+import { Hero as HeroTitle } from "@/components/typography";
 import Image from "next/image";
-import SearchBar from "@/components/search-bar";
+
+// Declare RealScout web components for TypeScript
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'realscout-advanced-search': any;
+    }
+  }
+}
+
+const categories = [
+  {
+    id: 1,
+    title: "Houses",
+    image: "/images/properties/houses/123-serenity-lane.webp",
+    url: "https://osazeokunbo.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0yMjE5"
+  },
+  {
+    id: 2,
+    title: "Condos",
+    image: "/images/properties/apartments/321-suburban-apartment.webp",
+    url: "https://osazeokunbo.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0yMjIw"
+  },
+  {
+    id: 3,
+    title: "Townhouses",
+    image: "/images/properties/townhouses/123-modern-townhouse.webp",
+    url: "https://osazeokunbo.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0yMjIx"
+  },
+  {
+    id: 4,
+    title: "Multifamily",
+    image: "/images/properties/apartments/789-downtown-loft.webp",
+    url: "https://osazeokunbo.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0yMjIy"
+  },
+  {
+    id: 5,
+    title: "Commercial",
+    image: "/images/properties/commercial/downtown-office.webp",
+    url: "https://osazeokunbo.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0yMjIz"
+  },
+];
 
 export default function Hero() {
-  const [searchTerm, setSearchTerm] = React.useState("");
-
   return (
     <>
       <div className={styles.img_container}>
         <Image
           src="/images/header-background.webp"
-          alt="Picture of the author"
-          layout="fill"
-          objectFit="cover"
+          alt="Los Angeles Real Estate"
+          fill
+          sizes="100vw"
+          style={{ objectFit: "cover" }}
+          priority
         />
 
         <div className={styles.overlay} />
 
         <HeroTitle size="hero-lg" className={styles.title}>
-          Find Your Next <br />
-          Home Sweet Home.
+          Your Los Angeles <br />
+          Real Estate Expert
         </HeroTitle>
-
-        <SearchBar
-          placeholder="Enter an address, neighborhood, city or ZIP code"
-          searchTerm={searchTerm}
-          onSearchTermChange={setSearchTerm}
-        />
       </div>
 
       <section className={cn("section", styles.section)}>
         <div className={cn("container", styles.container)}>
           <div className={styles.content}>
-            <Heading type="heading-3">
-              Find your dream home with our curated listings and expert
-              guidance.
-            </Heading>
-
-            <div className={styles.stack}>
-              <div className={styles.card}>
-                <div className={cn("paragraph-large", styles.card_subtitle)}>
-                  Property Investments
-                </div>
-                <div className={cn("heading-3")}>$1B+</div>
-              </div>
-
-              <div className={styles.card}>
-                <Image
-                  src="/images/intro.webp"
-                  alt="Picture of the author"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
+            <div className={styles.categories}>
+              {categories.map((category) => (
+                <a
+                  key={category.id}
+                  href={category.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.category}
+                >
+                  <div className={styles.image_container}>
+                    <Image
+                      src={category.image}
+                      alt={category.title}
+                      fill
+                      sizes="(max-width: 480px) 50vw, (max-width: 768px) 33vw, 20vw"
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                  <div className={styles.category_overlay}>
+                    <div className={styles.category_title}>{category.title}</div>
+                  </div>
+                </a>
+              ))}
             </div>
+            
+            <realscout-advanced-search 
+              agent-encoded-id="QWdlbnQtMjY3MDQ2"
+              className={styles.search}
+            />
           </div>
         </div>
       </section>

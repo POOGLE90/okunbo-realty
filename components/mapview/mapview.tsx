@@ -1,30 +1,36 @@
 import React from "react";
 import styles from "./mapview.module.css";
 import cn from "classnames";
-import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import { Location } from "@/constants/icons";
 
-const mapContainerStyle = {
-  width: "100%",
-  height: "500px",
-};
-
-const center = {
-  lat: 37.7749,
-  lng: -122.4194,
-};
 export default function MapView() {
+  const address = "15303 Ventura Blvd Bldg C Suite 400, Sherman Oaks, CA 91403";
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+
   return (
-    <>
-      {/* API key only works on this website, if you want to use it on your own website, you need to get your own API key from Google Cloud Platform. */}
-      <LoadScript googleMapsApiKey="AIzaSyDQseUyUqI_D7qkfl-RmsmufqWwmAWEFdc">
-        <GoogleMap
-          mapContainerStyle={mapContainerStyle}
-          center={center}
-          zoom={10}
-        >
-          {/* Add any markers or additional features here */}
-        </GoogleMap>
-      </LoadScript>
-    </>
+    <div className={styles.mapContainer}>
+      <a 
+        href={googleMapsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.mapLink}
+      >
+        <div className={styles.mapPlaceholder}>
+          <div className={styles.mapContent}>
+            <div className={styles.mapIcon}>
+              {Location}
+            </div>
+            <div className={styles.addressText}>
+              15303 Ventura Blvd Bldg C Suite 400
+              <br />
+              Sherman Oaks, CA 91403
+            </div>
+            <div className={styles.directionsText}>
+              Click for directions in Google Maps →
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
   );
 }

@@ -1,7 +1,26 @@
 .logo {
     z-index: 99;
-    color: var(--white);
-    font-size: 24px;
-    line-height: 32px;
-    font-family: var(--font-author-semibold);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.image {
+    height: auto;
+    width: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .image {
+        width: 120px;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .image {
+        width: 100px;
+        height: auto;
+    }
 }

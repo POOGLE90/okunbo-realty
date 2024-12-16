@@ -1,25 +1,29 @@
 .section {
     background-color: var(--orange-700);
+    padding: 40px 0; /* Reduced from default section padding */
 }
 
 .container {
     display: grid;
-    gap: 80px;
+    gap: 40px; /* Reduced from 80px */
 }
 
 .content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Added smaller gap */
 }
 
 .title {
     color: var(--white);
+    font-size: 20px; /* Reduced size */
 }
 
 .email {
-    margin-top: 24px;
+    margin-top: 12px; /* Reduced from 24px */
     text-transform: uppercase;
     color: var(--white);
+    font-size: 14px; /* Reduced size */
 }
 
 .divider {
@@ -31,7 +35,7 @@
 .business_info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 16px; /* Added specific gap instead of space-between */
 }
 
 .socials {
@@ -41,47 +45,51 @@
 
 .social svg {
     fill: var(--white);
+    width: 20px; /* Added specific size */
+    height: 20px;
 }
 
 .address,
 .phone,
 .copyright {
     color: var(--white);
+    font-size: 14px; /* Reduced size */
 }
 
 .phone {
-    margin-top: 8px;
+    margin-top: 4px; /* Reduced from 8px */
 }
 
 .links {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 12px; /* Reduced from 24px */
 }
 
 .link {
     color: var(--white);
+    font-size: 14px; /* Reduced size */
 }
 
 @media (max-width: 1024px) {
     .container {
-        gap: 64px;
+        gap: 32px; /* Reduced from 64px */
     }
 }
 
 @media (max-width: 768px) {
     .container {
-        gap: 48px;
+        gap: 24px; /* Reduced from 48px */
     }
 }
 
 @media (max-width: 480px) {
     .content {
         grid-template-columns: 1fr;
-        gap: 48px;
+        gap: 24px; /* Reduced from 48px */
     }
 
     .business_info {
-        gap: 32px;
+        gap: 16px; /* Reduced from 32px */
     }
 }

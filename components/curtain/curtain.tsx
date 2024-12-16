@@ -28,7 +28,7 @@ export default function Curtain() {
       variants={variants}
       style={{ originY: 0 }}
     >
-      <motion.div className={styles.title}>HeavenHomes™</motion.div>
+      <motion.div className={styles.title}>Okunbo Realty™</motion.div>
     </motion.div>
   );
 }

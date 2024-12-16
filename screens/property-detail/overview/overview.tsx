@@ -16,7 +16,7 @@ const details = [
     features: [
       {
         id: 1,
-        text: "This beautifully priced home offers a fantastic value for a serene and spacious living environment in the desirable HeavenHomes community.",
+        text: "This beautifully priced home offers a fantastic value for a serene and spacious living environment in the desirable Okunbo Realty community.",
       },
       {
         id: 2,
@@ -38,7 +38,7 @@ const details = [
     features: [
       {
         id: 1,
-        text: "This beautifully priced home offers a fantastic value for a serene and spacious living environment in the desirable HeavenHomes community.",
+        text: "This beautifully priced home offers a fantastic value for a serene and spacious living environment in the desirable Okunbo Realty community.",
       },
       {
         id: 2,

@@ -1,32 +1,20 @@
-import Layout from "@/components/Layout";
-import LatestListings from "./latest-listings";
+import React from "react";
 import Benefits from "./benefits";
-import Showcase from "./showcase";
-import Categories from "./categories";
-import Team from "./team";
-import Services from "./services";
-import Partners from "./partners";
-import Testimonials from "./testimonials";
-import Newsletter from "../universal/newsletter";
 import Hero from "./hero";
-import Offices from "../universal/offices";
-import Facts from "../universal/facts";
+import LatestListings from "./latest-listings";
+import Team from "./team";
+import ServiceAreas from "../universal/service-areas";
+import VideoSection from "./video-section";
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <Layout>
+    <>
       <Hero />
+      <VideoSection />
       <LatestListings />
-      <Benefits />
-      <Showcase />
-      <Offices />
-      <Categories />
-      <Facts />
+      <ServiceAreas />
       <Team />
-      <Services />
-      <Partners />
-      <Testimonials />
-      <Newsletter />
-    </Layout>
+      <Benefits />
+    </>
   );
 }

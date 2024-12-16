@@ -15,7 +15,7 @@ export default function Hero() {
             <div className={cn("heading-6", styles.title)}>Get In Touch</div>
             <div className={cn("paragraph-medium", styles.subtitle)}>
               {
-                "We'd love to hear from you! Whether you have a question about our listings, services, our just want to talk about your dream home, our team is here to help."
+                "We'd love to hear from you! Whether you have a question about our listings, services, or just want to talk about your dream home, our team is here to help."
               }
             </div>
           </div>
@@ -28,7 +28,9 @@ export default function Hero() {
                 OFFICE
               </div>
               <div className={cn("paragraph-medium", styles.contact_text)}>
-                123 Serenity Street, Suburbia, TX 75001
+                15303 Ventura Blvd Bldg C Suite 400
+                <br />
+                Sherman Oaks, CA, 91403
               </div>
             </div>
 
@@ -37,10 +39,10 @@ export default function Hero() {
                 CONTACT
               </div>
               <div className={cn("paragraph-medium", styles.contact_text)}>
-                (123) 456-7890
+                818-857-1591
               </div>
               <div className={cn("paragraph-medium", styles.contact_text)}>
-                info@heavenhomes.com
+                OkunboRealty@Gmail.com
               </div>
             </div>
           </div>
@@ -77,7 +79,7 @@ export default function Hero() {
             <button className={cn("button", styles.button)}>Send</button>
             <div className={cn("paragraph-small", styles.agreeText)}>
               By submitting, you agree to our <span>Privacy Policy</span> and
-              consent to be contacted by HeavenHomes.
+              consent to be contacted by Okunbo Realty.
             </div>
           </div>
         </form>

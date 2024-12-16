@@ -1,0 +1,32 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model BlogPost {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  content     String
+  excerpt     String
+  coverImage  String?
+  images      String?  // JSON array of image URLs
+  tags        String   // JSON array
+  readingTime Int?     @default(10)
+  author      String?  @default("Okunbo Realty Team")
+  authorImage String?  @default("/images/team/author.jpg")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  publishedAt DateTime @default(now())
+  published   Boolean  @default(true)
+  seoTitle    String?
+  seoDesc     String?
+  sections    String?  // JSON array of section titles
+}

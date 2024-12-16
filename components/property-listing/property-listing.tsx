@@ -33,9 +33,11 @@ export default function PropertyListing({ item }: PropertyListingProps) {
         <Image
           src={item.images && item.images[0]}
           alt={item.title}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
+          fill
+          style={{ 
+            objectFit: "cover",
+            objectPosition: "center"
+          }}
         />
 
         <div className={cn("paragraph-small", styles.listing_price)}>

@@ -1,0 +1,107 @@
+.wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.widget {
+  /* Base styles */
+  width: 100%;
+  font-family: inherit;
+
+  /* RealScout advanced search variables */
+  --rs-as-button-text-color: #ffffff;
+  --rs-as-background-color: #ffffff;
+  --rs-as-button-color: #e85d24;
+  --rs-as-widget-width: 100% !important;
+  --rs-as-input-border-color: #e5e7eb;
+  --rs-as-input-background: #f9fafb;
+  --rs-as-dropdown-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the main search input */
+.widget :global(.rs-as-search-input) {
+  width: 100%;
+  height: 60px;
+  padding: 0 24px;
+  font-size: 18px;
+  border: 1px solid var(--rs-as-input-border-color);
+  border-radius: 8px;
+  background: var(--rs-as-input-background);
+  margin-bottom: 16px;
+}
+
+/* Style the filter inputs (beds, baths, price) */
+.widget :global(.rs-as-filter-input) {
+  height: 48px;
+  padding: 0 16px;
+  font-size: 16px;
+  border: 1px solid var(--rs-as-input-border-color);
+  border-radius: 8px;
+  background: var(--rs-as-input-background);
+}
+
+/* Style the search button */
+.widget :global(.rs-as-search-button) {
+  height: 60px;
+  padding: 0 32px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--rs-as-button-text-color);
+  background: var(--rs-as-button-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.widget :global(.rs-as-search-button:hover) {
+  background: #d44d1a;
+}
+
+/* Style filter labels */
+.widget :global(.rs-as-filter-label) {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+/* Style the filter container */
+.widget :global(.rs-as-filters) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* Style dropdowns */
+.widget :global(.rs-as-dropdown) {
+  position: relative;
+}
+
+.widget :global(.rs-as-dropdown-content) {
+  background: white;
+  border: 1px solid var(--rs-as-input-border-color);
+  border-radius: 8px;
+  box-shadow: var(--rs-as-dropdown-shadow);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .widget :global(.rs-as-search-input),
+  .widget :global(.rs-as-search-button) {
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .widget :global(.rs-as-filter-input) {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .widget :global(.rs-as-filters) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
