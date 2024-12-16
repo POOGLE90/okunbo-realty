@@ -7,13 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "blog:generate": "NODE_OPTIONS='--loader ts-node/esm' ts-node --project scripts/tsconfig.json scripts/generate-blog-post.ts",
-    "db:push": "prisma db push",
-    "db:generate": "prisma generate"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@prisma/client": "^6.0.1",
     "@react-google-maps/api": "^2.19.3",
     "@vis.gl/react-google-maps": "^1.1.0",
     "classnames": "^2.5.1",
@@ -22,7 +18,6 @@
     "next": "14.2.5",
     "node-cron": "^3.0.3",
     "openai": "^4.76.3",
-    "prisma": "^6.0.1",
     "react": "^18",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.5",
