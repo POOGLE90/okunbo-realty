@@ -154,7 +154,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                   <h3>About the Author</h3>
                   <h4>Osaze Okunbo</h4>
                   <p>
-                    Real Estate Agent Osaze Okunbo also runs "The Realtors Studio," a media company that has helped its hundreds of homes sell through high-quality property media. With extensive experience in the Los Angeles real estate market, Osaze combines his deep market knowledge with innovative marketing strategies to deliver exceptional results for his clients.
+                    Real Estate Agent Osaze Okunbo also runs &quot;The Realtors Studio,&quot; a media company that has helped its hundreds of homes sell through high-quality property media. With extensive experience in the Los Angeles real estate market, Osaze combines his deep market knowledge with innovative marketing strategies to deliver exceptional results for his clients.
                   </p>
                 </div>
               </div>
