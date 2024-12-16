@@ -1,95 +1,66 @@
 .section {
     background-color: var(--orange-700);
-    padding: 40px 0; /* Reduced from default section padding */
+    padding: 40px 0;
 }
 
 .container {
-    display: grid;
-    gap: 40px; /* Reduced from 80px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
 }
 
 .content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px; /* Added smaller gap */
-}
-
-.title {
-    color: var(--white);
-    font-size: 20px; /* Reduced size */
-}
-
-.email {
-    margin-top: 12px; /* Reduced from 24px */
-    text-transform: uppercase;
-    color: var(--white);
-    font-size: 14px; /* Reduced size */
-}
-
-.divider {
-    background-color: var(--orange-600);
-    height: 1px;
+    display: flex;
+    justify-content: center;
     width: 100%;
 }
 
 .business_info {
     display: flex;
     flex-direction: column;
-    gap: 16px; /* Added specific gap instead of space-between */
+    align-items: center;
+    gap: 24px;
+}
+
+.logo {
+    color: var(--white);
 }
 
 .socials {
     display: flex;
-    gap: 8px;
+    gap: 24px;
 }
 
-.social svg {
-    fill: var(--white);
-    width: 20px; /* Added specific size */
-    height: 20px;
+.social {
+    color: var(--white);
+    transition: opacity 0.3s;
 }
 
-.address,
-.phone,
+.social:hover {
+    opacity: 0.8;
+}
+
 .copyright {
     color: var(--white);
-    font-size: 14px; /* Reduced size */
-}
-
-.phone {
-    margin-top: 4px; /* Reduced from 8px */
-}
-
-.links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px; /* Reduced from 24px */
-}
-
-.link {
-    color: var(--white);
-    font-size: 14px; /* Reduced size */
-}
-
-@media (max-width: 1024px) {
-    .container {
-        gap: 32px; /* Reduced from 64px */
-    }
+    opacity: 0.8;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
-    .container {
-        gap: 24px; /* Reduced from 48px */
+    .section {
+        padding: 32px 0;
     }
-}
 
-@media (max-width: 480px) {
-    .content {
-        grid-template-columns: 1fr;
-        gap: 24px; /* Reduced from 48px */
+    .container {
+        gap: 20px;
     }
 
     .business_info {
-        gap: 16px; /* Reduced from 32px */
+        gap: 20px;
+    }
+
+    .socials {
+        gap: 20px;
     }
 }

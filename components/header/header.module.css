@@ -138,7 +138,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 20px;
+        padding: 80px 20px 20px;
         overflow-y: auto;
     }
 
@@ -176,21 +176,20 @@
     .button_wrapper {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 16px;
     }
 
     .button_wrapper .burger {
         display: flex;
+        margin-left: 16px;
     }
 
     .container {
-        padding: 0 20px;
+        padding: 0 16px;
     }
-}
 
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    /* Hide the Get In Touch button when menu is open */
+    .nav.visible ~ .button_wrapper .button {
+        display: none;
     }
 }

@@ -48,4 +48,10 @@
     .marquees {
         gap: 16px;
     }
+
+    .marquee_text {
+        font-size: 1.25rem !important; /* Override heading-3 size */
+        line-height: 1.5 !important;
+        letter-spacing: -0.02em;
+    }
 }
