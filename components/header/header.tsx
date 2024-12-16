@@ -7,7 +7,7 @@ import Logo from "../logo";
 import Burger from "../burger";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const nav_links = [
   { title: "Home", href: "/" },
@@ -30,6 +30,7 @@ export default function Header() {
   const [mobile, setMobile] = React.useState(false);
   const [sticky, setSticky] = React.useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -56,6 +57,11 @@ export default function Header() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  // Close menu when route changes
+  React.useEffect(() => {
+    setVisibleNav(false);
+  }, [pathname]);
 
   const navVariants = {
     hidden: { clipPath: "inset(0% 0% 100% 0%)" },
@@ -88,6 +94,12 @@ export default function Header() {
       if (mobile) {
         setVisibleNav(false);
       }
+    }
+  };
+
+  const handleNavClick = (href: string) => {
+    if (mobile) {
+      setVisibleNav(false);
     }
   };
 
@@ -129,6 +141,7 @@ export default function Header() {
                     [styles.black_link]: isBlackHeader && !(mobile && visibleNav),
                     [styles.sticky_link]: sticky,
                   })}
+                  onClick={() => handleNavClick(link.href)}
                 >
                   {link.title}
                 </a>
@@ -141,6 +154,7 @@ export default function Header() {
                     [styles.black_link]: isBlackHeader && !(mobile && visibleNav),
                     [styles.sticky_link]: sticky,
                   })}
+                  onClick={() => handleNavClick(link.href)}
                 >
                   {link.title}
                 </Link>
@@ -156,6 +170,7 @@ export default function Header() {
               [styles.black_button]: isBlackHeader && !(mobile && visibleNav),
               [styles.sticky_button]: sticky,
             })}
+            onClick={() => handleNavClick('/contact')}
           >
             Get In Touch
           </Link>
