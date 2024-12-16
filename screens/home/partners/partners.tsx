@@ -3,7 +3,6 @@ import styles from "./partners.module.css";
 import cn from "classnames";
 import Image from "next/image";
 import { Heading } from "@/components/typography";
-import { Bankrate, Corning, Flexport } from "@/constants/icons";
 import Link from "next/link";
 
 export default function Partners() {
@@ -27,31 +26,28 @@ export default function Partners() {
           <div className={styles.image_container}>
             <Image
               src="/images/partners/flexport.webp"
-              alt="partners"
-              layout="fill"
-              objectFit="cover"
+              alt="Flexport"
+              fill
+              style={{ objectFit: "cover" }}
             />
-            <div className={styles.logo}>{Flexport}</div>
           </div>
 
           <div className={styles.side_images}>
             <div className={styles.image_container}>
               <Image
                 src="/images/partners/check.webp"
-                alt="partners"
-                layout="fill"
-                objectFit="cover"
+                alt="Bankrate"
+                fill
+                style={{ objectFit: "cover" }}
               />
-              <div className={styles.logo}>{Bankrate}</div>
             </div>
             <div className={styles.image_container}>
               <Image
                 src="/images/partners/corning.webp"
-                alt="partners"
-                layout="fill"
-                objectFit="cover"
+                alt="Corning"
+                fill
+                style={{ objectFit: "cover" }}
               />
-              <div className={styles.logo}>{Corning}</div>
             </div>
           </div>
         </div>

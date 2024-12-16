@@ -22,7 +22,7 @@ const facts = [
   {
     id: 3,
     icon: Medal,
-    title: 15,
+    title: "15",
     description:
       "Our team of 15 experts is dedicated to providing the highest quality service and support to our clients.",
   },
